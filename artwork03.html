@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <!-- responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+	<link rel="stylesheet" type="text/css" href="stylesheet_BACKUP.css">
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+    <title>Great Art - Gretchen Albrecht - Belladonna</title>
+</head>
+<body>
+	<div class="wrapper">
+		<div id="header-img">
+				<img src="images/lastlight2_banner.png" alt="Great Art Logo & Banner">
+		</div>
+			
+        <div class="main-nav">
+            <input type="checkbox" id="menuToggle" />
+            <label for="menuToggle" class="menu-icon">&#9776;</label>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="artist-biography.html">Artist Bio</a></li>
+                    <li class="active"><a href="gallery.html">Gallery</a></li>
+					<li><a href="blog.html">Blog</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+
+		<div class="main-content">
+			<div class="img-box-jumbo">
+				<img src="images/belladonna-lg.jpg" alt="Belladonna">
+				<img src="images/fb_like.png" id="fb" alt="Facebook">
+				<img src="images/PgpnXhhh.jpg" id="inst" alt="Instagram">
+				<p>B e l l a d o n n a,  2013</p>
+				<p>acrylic & oil on canvas</p>
+				<p>176 x 300 cm</p>
+			</div>
+		</div>
+		
+		<footer id="footer-ul">
+            <p id="footer-p"><a href="contact-us.html" >&copy; Great Art, 2016</a></p>
+        </footer>
+	</div>
+
+    <script>
+        /*  JQUERY */
+        var elementPosition = $('.main-nav').offset();
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > elementPosition.top) {
+                $('.main-nav').css('position', 'fixed').css('top', '0');
+                $('.main-content').css('margin-top', $('.main-nav').height());
+            } else {
+                $('.main-nav').css('position', 'static');
+				$('.main-content').css('margin-top', '0');
+            }
+        });
+		
+		$('.wrapper').css('margin-bottom', $('#footer-ul').outerHeight());
+    </script>
+</body>
+</html>

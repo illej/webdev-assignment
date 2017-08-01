@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <!-- responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" type="text/css" href="stylesheet_BACKUP.css">
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    
+    <title>Great Art - Artist Biography</title>
+</head>
+<body>
+	<div class="wrapper">
+		<div id="header-img">
+				<img src="images/lastlight2_banner.png" alt="Great Art Logo & Banner">
+		</div>
+		
+        <div class="main-nav">
+            <input type="checkbox" id="menuToggle" />
+            <label for="menuToggle" class="menu-icon">&#9776;</label>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active"><a href="artist-biography.html">Artist Bio</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+					<li><a href="blog.html">Blog</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="main-content">
+            <main>
+                <h2>Artist Biography</h2>
+				<img id="bio-img" src="images/galbrecht.jpg" alt="Gretchen Albrecht">
+                <p>Gretchen Albrecht has exhibited in New Zealand and internationally for more than 35 years. Her paintings were exhibited in Valencia, Spain as part of the exhibition Ultramarte at the Casa Museo Benlliure, and throughout New Zealand in the group exhibition Diaspora: Pluralism and Singularity and her survey exhibitions Illuminations at Auckland Art Gallery and Returning at Dunedin Art gallery.</p>
+                <p>Since the 1970s, Albrecht's work has evolved from the poured acrylic 'stained canvases' for which she first gained widespread recognition, into a pair of signature 'shaped-canvas' formats: the hemisphere (half circle) & the oval. These are shapes that Albrecht associates with particular meanings & states of mind. In the shaped-canvas paintings she has been producing since the early 1980s, resonant combinations of colour and geometry create images with a clear poetic impulse, in which references to landscape, family and the cosmos act as emotional points of departure.</p>
+                <p>Since 2000 Albrecht's artistic horizons have broadened to encompass large-scale stainless steel sculpture and have witnessed the inception of a series of multi-paneled rectangular paintings featuring an inner rectangular 'threshold' motif.
+					In 2009 Albrecht began working on a new series of rectangular paintings featuring oval-shaped vortices of colour combined with slender horizontal geometric figures. The first of these paintings were exhibited in her exhibitions: Between Paint and Nature at Nadene Milne Gallery, Arrowtown, and Rosea at Mark Hutchins Gallery, Wellington. In 2010 Albrecht showed 5 in her solo exhibition Roses in the Snow, at Sue Crockford Gallery, Auckland.
+					In 2014 Albrecht had her first solo exhibition with Two Rooms, Auckland. The paintings exhibited utilised the three stretcher shapes of hemispheres, ovals and rectangles (see images on exhibitions page) and ranged in scale from the intimate hemispheres on copper, to ovals and very large scale rectangles on canvas.
+					Albrecht continues to develop her ideas using the three painting-stretcher shapes of hemisphere, oval and rectangle.</p>
+            </main>
+        </div>
+
+		<footer id="footer-ul">
+            <p id="footer-p"><a href="contact-us.html" >&copy; Great Art, 2016</a></p>
+        </footer>
+    </div>
+
+    <script>
+        /*  JQUERY */
+        var elementPosition = $('.main-nav').offset();
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > elementPosition.top) {
+                $('.main-nav').css('position', 'fixed').css('top', '0');
+                $('.main-content').css('margin-top', $('.main-nav').height());
+            } else {
+                $('.main-nav').css('position', 'static');
+				$('.main-content').css('margin-top', '0');
+            }
+        });
+		
+		$('.wrapper').css('margin-bottom', $('#footer-ul').outerHeight());
+    </script>
+</body>
+</html>

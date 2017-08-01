@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <!-- responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" type="text/css" href="stylesheet_BACKUP.css">
+	<link rel="stylesheet" href="woothemes-FlexSlider-2.6.1-0-g622f7fd/flexslider.css">
+	
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="woothemes-FlexSlider-2.6.1-0-g622f7fd/jquery.flexslider-min.js"></script>
+	
+    <title>Great Art</title>
+</head>
+<body>
+	<div class="wrapper">
+		<div id="header-img">
+				<img src="images/lastlight2_banner.png" alt="Great Art Logo & Banner">
+		</div>
+			
+        <div class="main-nav">
+            <input type="checkbox" id="menuToggle" />
+            <label for="menuToggle" class="menu-icon">&#9776;</label>
+
+            <nav>
+                <ul>
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="artist-biography.html">Artist Bio</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+					<li><a href="blog.html">Blog</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    
+        <div class="main-content">
+            <main>
+                <h2>Welcome</h2>
+                <p>Welcome to the <span class="special">Great Art</span> website! Here you will find information and updates on a wide variety of artists, as well as a vast collection of their works.</p>
+                <p>We hope you enjoy this website, and learn a lot from it!</p>
+				
+				<div class="flexslider">
+				  <ul class="slides">
+					<li>
+					  <img src="images/rosaSplendour-lg.jpg" alt="Rosa Spendlour"/>
+					</li>
+					<li>
+					  <img src="images/Ice_Shelf_2008-lg.jpg" alt="Ice Shelf"/>
+					</li>
+					<li>
+					  <img src="images/pastorale-lg.jpg" alt="Pastoraler"/>
+					</li>
+					<li>
+					  <img src="images/Albrecht-DaysEndLookingWest.jpg" alt="Days End"/>
+					</li>
+					<li>
+					  <img src="images/ashes-lg.jpg" alt="Ashes"/>
+					</li>
+				  </ul>
+				</div>
+				
+				<hr>
+				
+				<h2>News</h2>
+				<h3>Exhibitions - 2015</h3>
+                <p><span class="special">Gretchen Albrecht at Old Government House</span>, Auckland.
+					Works from the University of Auckland Collection 
+					(July 15th - September 11th)</p>
+				<p>
+					<a href="#">Read More ..</a>
+				</p>
+						
+				<p><span class="special">Colloquy</span>, Two Rooms Gallery, Auckland.
+					Exhibition and Book Launch 
+					(July 10th - August 8th)</p>
+				<p>
+					<a href="#">Read More ..</a>
+				</p>
+
+				<p><span class="special">Selections from the Rutherford Trust Collection</span> 
+					Masterworks from 40 leading New Zealand artists including 
+					Gretchen Albrecht. Aratoi Wairarapa Museum of Art & History, Masterton, NZ
+					(May 22nd - August 16th) </p>
+				<p>
+					<a href="#">Read More ..</a>
+				</p>
+				
+				<p><span class="special">Swimming into Darkness</span>, Nadene Milne Gallery, Arrowtown
+					New paintings by Gretchen Albrecht 
+					(April 16th - May 7th)</p>
+				<p>
+					<a href="#">Read More ..</a>
+				</p>
+				
+				<hr id="news-hr">
+				
+				<h3>An Interview with Gretchen Albrecht</h3>
+				<div class="news-item">
+					<p>Video courtesy of 
+					<a href="https://www.youtube.com/watch?v=YsAcxtEQeDg">TheRealArtRoadshow</a>.
+					</p>
+					<video controls>
+						<source src="video/Gretchen-Albrecht.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+					<p>May 26, 2011</p>
+				</div>
+            </main>
+
+			<hr id="bottom-rule">
+			
+            <aside>
+				<h3>Newsletter Form</h3>
+				<form id="home-form" method="POST" action="mailto:h.hdink@greatart.com">
+					<label for="email" class="form-label">Email: </label>
+						<br>
+						<input type="email" id="email" required>
+						<input type="submit">
+					<p>Please sign up to our newsletter to recieve updates about your favourite artists!</p>
+				</form>	
+			</aside>
+        </div>
+
+        <footer id="footer-ul">
+            <p id="footer-p"><a href="contact-us.html" >&copy; Great Art, 2016</a></p>
+        </footer>
+    </div>
+
+    <script>
+        /*  JQUERY */
+        var elementPosition = $('.main-nav').offset();
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > elementPosition.top) {
+                $('.main-nav').css('position', 'fixed').css('top', '0');
+                $('.main-content').css('margin-top', $('.main-nav').height());
+            } else {
+                $('.main-nav').css('position', 'static');
+				$('.main-content').css('margin-top', '0');
+            }
+        });
+		
+		$('.wrapper').css('margin-bottom', $('#footer-ul').outerHeight());
+		
+		/* FlexSlida */
+		// Can also be used with $(document).ready()
+		$(window).load(function() {
+		  $('.flexslider').flexslider({
+			animation: "slide"
+		  });
+		});
+    </script>
+</body>
+</html>

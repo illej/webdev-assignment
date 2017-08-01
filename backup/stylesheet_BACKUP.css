@@ -1,0 +1,233 @@
+/*	RESET */
+* {
+    box-sizing: border-box;
+}
+
+/*	LAYOUT */
+html {
+  overflow-y: scroll;
+}
+
+.wrapper {
+	width: 52em;
+	margin: 0 auto;
+}
+body {
+	margin: 0;
+	padding: 0;
+}
+header {
+	display: flex;
+}
+#logo {
+	flex: 1;
+}
+h1 {
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 2em;
+	flex: 2;
+}
+
+main {
+	width: 32em;
+}
+.main-content {
+	display: flex;
+}
+h2 {
+	text-align: center;
+}
+
+main h2 {
+	margin: 0 auto;
+	padding: 1em;
+}
+
+
+/* ---DESKTOP NAV--- */
+.main-nav {
+    width: 52em;
+    position: static; /* changes to FIXED in MOBILE mode */
+}
+.menu-icon {    /* maybe add as a LI */
+    padding: 1em;
+    background: black;
+    color: white;
+    cursor: pointer;
+   
+    display: none;  /* hide in DESKTOP mode */
+}
+#menuToggle {
+    display: none; /* ALWAYS hidden */
+}
+#menuToggle:checked ~ .menu-test {  /* SEND TO MEDIA QUERY */
+    position: fixed;
+    top: 51px;
+    display: block;
+}
+/* ----------------- */
+
+
+ul {    /* similar to .MAIN-NAV */
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	/*position: fixed;
+	top: 0;*/
+}
+li {
+	/*width: 186px;*/
+	margin: 0 auto;
+	padding: 1em;
+	list-style-type: none;
+}
+ul, footer {
+	display: flex;
+	background-color: black;
+	color: white;
+}
+#footer-ul {
+	padding: 1em;
+	/*position: fixed;*/
+	bottom: 0;
+	width: 52em;
+}
+
+
+/*	TYPOGRAPHY */
+* {
+	font-family: calibri;
+}
+figcaption {
+	text-align: center;
+	font-style: italic;
+}
+
+
+/* IMAGES */
+img {
+	width: 100%
+}
+#img-gallery {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.img-box {
+	border: 1px solid #ccc;
+	margin-top: 1em;
+	margin-bottom: 1em;
+
+}
+
+
+/*	COLOUR SCHEME & DESIGN */
+li a {
+	text-decoration: none;
+	margin: 0 auto;
+
+	padding-top: 1em;
+	padding-bottom: 1em;
+	
+	padding-left: 2em;
+	padding-right: 2em;
+
+}
+a {
+	color: white;
+}
+li a:hover {
+	color: white;
+	/*background-color: #ffcc00;*/
+	background-image: url("testbrush_blk.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	/*padding-left: 2em;
+	padding-right: 2em;*/
+	width: 100%;
+}
+
+.active {
+	/*background-color: #0080ff;*/
+	background-image: url("testbrush_blu.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	color: white;
+
+}
+
+/*	MEDIA QUERIES */
+@media screen and (max-width: 52em) {
+	.wrapper {
+		width: 100%; /* 32em */
+		margin: 0 auto;
+	}
+	main {
+        width: 100%;
+	}
+	.main-content {
+        width: 100%;
+		display: block;
+	}
+
+	h1 {
+		padding-top: 1em;
+	}
+	
+	ul {
+		display: block;
+	}
+	
+	li {
+		text-align: center;
+	}
+
+	li a {
+		padding-left: 30%;/*11em;*/
+		padding-right: 30%;/*11em;*/
+	}
+	
+	.main-nav {
+	    width: 100%;/*32em;*/
+    }
+	
+	#footer-ul {
+		width: 100% /* 32em; */
+	}
+
+    /* ---TEST NAV--- */
+    #menuToggle:checked ~ nav {
+        width: 100%; /* 32em */
+        position: static;
+        top: 51px;
+        display: block;
+    }
+
+     nav {
+        width: 100%;
+        position: static; /* changes to FIXED in MOBILE mode */
+        display: none;
+    }
+    .menu-icon {
+        padding: 1em;
+        background: black;
+        color: white;
+        cursor: pointer;
+        display: block;
+    }/*
+    #menuToggle {
+        display: none;
+    }
+    #menuToggle:checked ~ .menu-test {
+        position: absolute;
+        top: 51px; 
+        display: block;
+    }
+
+    #menuToggle:checked ~ .mobile-nav {
+        position: absolute;
+        display: block;
+    }
+     --------------- */
+}

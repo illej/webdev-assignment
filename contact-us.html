@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <!-- responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" type="text/css" href="stylesheet_BACKUP.css">
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+	<title>Great Art - Contact Us</title>
+</head>
+<body>
+	<div class="wrapper">
+		<div id="header-img">
+				<img src="images/lastlight2_banner.png" alt="Great Art Logo & Banner">
+		</div>
+		
+        <div class="main-nav">
+            <input type="checkbox" id="menuToggle" />
+            <label for="menuToggle" class="menu-icon">&#9776;</label>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="artist-biography.html">Artist Bio</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+					<li><a href="blog.html">Blog</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li class="active"><a href="contact-us.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="main-content">
+            <main>
+                <h2>Contact Us</h2>
+                <form id="contact-form" method="POST" action="mailto:h.hdink@greatart.com">
+					<p>If you would like to place feedback on our site please use the contact form below!</p>
+					<label for="name" class="form-label">Name: </label>
+					<input type="text" id="name" required>
+						<br>
+						
+					<label for="email" class="form-label">Email: </label>
+					<input type="email" id="email" required>
+						<br>
+						
+					<label class="form-label">Message: </label>
+						<br>
+						
+					<textarea required>
+					</textarea>
+					
+					<h3>Privacy Notice</h3>
+					<p>All information collected and the use of information is governed by the principles embodied in the Privacy Act 1993.</p>
+					<input type="checkbox" required>
+					<label><strong>I agree</strong> to the Privacy Notice.</label>
+						<br>
+						
+					<input type="submit">
+				</form>
+				
+				<hr class="style13">
+				
+				<div class="copyright-notice">
+					<h3>Copyright</h3>
+					<p>Copyright for this website will belong to the 'Great Art' company. Any content that is published onto this website belongs to the artist under the Copyright Act 1994. Except as provided by the Copyright Act 1994, no part of this publication may be reproduced or stored in a retrieval system in any form or by any means without the prior written permission of the copyright owner.</p>
+				</div>
+            </main>
+        </div>
+
+        <footer id="footer-ul">
+            <p id="footer-p"><a href="contact-us.html" >&copy; Great Art, 2016</a></p>
+        </footer>
+    </div>
+
+    <script>
+        /*  JQUERY */
+        var elementPosition = $('.main-nav').offset();
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > elementPosition.top) {
+                $('.main-nav').css('position', 'fixed').css('top', '0');
+                $('.main-content').css('margin-top', $('.main-nav').height()/*'51px'*/);
+            } else {
+                $('.main-nav').css('position', 'static');
+				$('.main-content').css('margin-top', '0');
+            }
+        });
+		
+		$('.wrapper').css('margin-bottom', $('#footer-ul').outerHeight());
+    </script>
+</body>
+</html>

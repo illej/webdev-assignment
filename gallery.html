@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <!-- responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+	<link rel="stylesheet" type="text/css" href="stylesheet_BACKUP.css">
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+    <title>Great Art - Gretchen Albrecht</title>
+</head>
+<body>
+	<div class="wrapper">
+		<div id="header-img">
+				<img src="images/lastlight2_banner.png" alt="Great Art Logo & Banner">
+		</div>
+			
+        <div class="main-nav">
+            <input type="checkbox" id="menuToggle" />
+            <label for="menuToggle" class="menu-icon">&#9776;</label>
+
+            <nav id="mainnav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="artist-biography.html">Artist Bio</a></li>
+                    <li class="active"><a href="gallery.html" >Gallery</a></li>
+					<li><a href="blog.html">Blog</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+
+		<div class="main-content">
+			<div id="gallery-main">
+				<h2>Gretchen Albrecht</h2>
+				<div id="img-gallery">
+					<figure class="img-box">
+						<a href="artwork01.html">
+							<img src="images/Albrecht-AlbaInAshesForAndrew.jpg" alt="Abla In Ashes">
+						</a>
+						<figcaption>
+							Alba in Ashes
+						</figcaption>
+					</figure>
+					<figure class="img-box">
+						<a href="artwork02.html">
+							<img src="images/Albrecht-DaysEndLookingWest.jpg" alt="Days End">
+						</a>	
+						<figcaption>
+							Days End (Looking West)
+						</figcaption>
+					</figure>
+					<figure class="img-box">
+						<a href="artwork03.html">
+							<img src="images/belladonna-lg.jpg" alt="Belladonna">
+						</a>
+						<figcaption>
+							Belladona
+						</figcaption>
+					</figure>
+					<figure class="img-box">
+						<a href="artwork04.html">
+							<img src="images/zephyr.jpg" alt="Zephyr">
+						</a>
+						<figcaption>
+							Zephyr
+						</figcaption>
+					</figure>
+					<figure class="img-box">
+						<img src="images/Albrecht-SketchPink-Cloud.jpg" alt="Sketch Pink Clouds">
+						<figcaption>
+							Pink Cloud
+						</figcaption>
+					</figure>
+					<figure class="img-box">
+						<img src="images/pastorale-lg.jpg" alt="Pastorale">
+						<figcaption>
+							Pastorale
+						</figcaption>
+					</figure>
+					<figure class="img-box">
+						<img src="images/rosaSplendour-lg.jpg" alt="Rosa Splendour">
+						<figcaption>
+							Rosa Splendour
+						</figcaption>
+					</figure>
+					<figure class="img-box">
+						<img src="images/whisper-lg.jpg" alt="Whisper">
+						<figcaption>
+							Whisper
+						</figcaption>
+					</figure>
+					<figure class="img-box">
+						<img src="images/ashes-lg.jpg" alt="Ashes">
+						<figcaption>
+							Ashes
+						</figcaption>
+					</figure>
+					<figure class="img-box">
+						<img src="images/Dark_Iris_2013-lg.jpg" alt="Dark Iris">
+						<figcaption>
+							Dark Iris
+						</figcaption>
+					</figure>
+					<figure class="img-box">
+						<img src="images/Gate_greyPink_2002-lg.jpg" alt="Gate">
+						<figcaption>
+							Gate
+						</figcaption>
+					</figure>
+					<figure class="img-box">
+						<img src="images/sheba.jpg" alt="Sheba">
+						<figcaption>
+							Sheba
+						</figcaption>
+					</figure>
+					<figure class="img-box">
+						<img src="images/Ice_Shelf_2008-lg.jpg" alt="Ice Shelf">
+						<figcaption>
+							Ice Shelf
+						</figcaption>
+					</figure>
+					<figure class="img-box">
+						<img src="images/deepSea.jpg" alt="Deep Sea">
+						<figcaption>
+							Deep Sea
+						</figcaption>
+					</figure>
+					<figure class="img-box">
+						<img src="images/showerGold.jpg" alt="In a Shower of Gold">
+						<figcaption>
+							In a Shower of Gold
+						</figcaption>
+					</figure>
+				</div>
+			</div>
+		</div>
+		
+		<footer id="footer-ul">
+            <p id="footer-p"><a href="contact-us.html" >&copy; Great Art, 2016</a></p>
+        </footer>
+	</div>
+
+    <script>
+        /*  JQUERY */
+        var elementPosition = $('.main-nav').offset();
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > elementPosition.top) {
+                $('.main-nav').css('position', 'fixed').css('top', '0');
+                $('.main-content').css('margin-top', $('.main-nav').height());
+            } else {
+                $('.main-nav').css('position', 'static');
+				$('.main-content').css('margin-top', '0');
+            }
+        });
+		
+		$('.wrapper').css('margin-bottom', $('#footer-ul').outerHeight());
+    </script>
+</body>
+</html>
